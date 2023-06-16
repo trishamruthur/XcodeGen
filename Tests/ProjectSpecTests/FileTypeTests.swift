@@ -18,7 +18,7 @@ class FileTypeTests: XCTestCase {
             let filetype5 = "xpc"
             let filetype6 = "xcconfig"
             
-            $0.it("has correct sdkRoot") {
+            $0.it("has correct buildPhase") {
                 try expect(FileType.defaultFileTypes[filetype1]) == FileType(buildPhase: .resources)
                 try expect(FileType.defaultFileTypes[filetype2]) == FileType(buildPhase: .sources)
                 try expect(FileType.defaultFileTypes[filetype3])  == FileType(buildPhase: .headers)
