@@ -11,20 +11,13 @@ class FileTypeTests: XCTestCase {
     func testFileType(){
 
         describe{
-            let filetype1 = "bundle"
-            let filetype2 = "swift"
-            let filetype3 = "h"
-            let filetype4 = "framework"
-            let filetype5 = "xpc"
-            let filetype6 = "xcconfig"
-            
             $0.it("has correct fileType") {
-                try expect(FileType.defaultFileTypes[filetype1]) == FileType(buildPhase: .resources)
-                try expect(FileType.defaultFileTypes[filetype2]) == FileType(buildPhase: .sources)
-                try expect(FileType.defaultFileTypes[filetype3])  == FileType(buildPhase: .headers)
-                try expect(FileType.defaultFileTypes[filetype4])  == FileType(buildPhase: .frameworks)
-                try expect(FileType.defaultFileTypes[filetype5]) == FileType(buildPhase: .copyFiles(.xpcServices))
-                try expect(FileType.defaultFileTypes[filetype6])  == FileType(buildPhase: BuildPhaseSpec.none)
+                try expect(FileType.defaultFileTypes["bundle"]) == FileType(buildPhase: .resources)
+                try expect(FileType.defaultFileTypes["swift"]) == FileType(buildPhase: .sources)
+                try expect(FileType.defaultFileTypes["h"])  == FileType(buildPhase: .headers)
+                try expect(FileType.defaultFileTypes["framework"])  == FileType(buildPhase: .frameworks)
+                try expect(FileType.defaultFileTypes["xpc"]) == FileType(buildPhase: .copyFiles(.xpcServices))
+                try expect(FileType.defaultFileTypes["xcconfig"])  == FileType(buildPhase: BuildPhaseSpec.none)
                 
             }
         }
