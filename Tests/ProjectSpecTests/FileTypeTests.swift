@@ -9,8 +9,7 @@ import Version
 class FileTypeTests: XCTestCase {
     
     func testFileType(){
-        
-        
+
         describe{
             let filetype1 = "bundle"
             let filetype2 = "swift"
@@ -31,7 +30,6 @@ class FileTypeTests: XCTestCase {
         }
     }
     func testSDKRoot(){
-        
         
         describe{
             
