@@ -11,7 +11,7 @@ class FileTypeTests: XCTestCase {
     func testFileType(){
 
         describe{
-            $0.it("has correct fileType") {
+            $0.it("has correct FileType") {
                 try expect(FileType.defaultFileTypes["bundle"]) == FileType(buildPhase: .resources)
                 try expect(FileType.defaultFileTypes["swift"]) == FileType(buildPhase: .sources)
                 try expect(FileType.defaultFileTypes["h"])  == FileType(buildPhase: .headers)
